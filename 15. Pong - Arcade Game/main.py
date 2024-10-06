@@ -38,16 +38,16 @@ while game_on:
         ball.bounce_y()
 
     #Hit with paddle
-    elif ball.xcor() > 320 and ball.distance(r_paddle) < 50 or ball.xcor() < -320 and ball.distance(l_paddle) < 50:
+    elif ball.xcor() > 320 and ball.distance(r_paddle) < 60 or ball.xcor() < -320 and ball.distance(l_paddle) < 60:
         ball.bounce_x()
 
     #right paddle misses
-    elif ball.xcor() > 380:
+    elif ball.xcor() > 370:
         ball.reset_position()
         scoreboard.l_point()
 
     #left paddle misses
-    elif ball.xcor() < -380:
+    elif ball.xcor() < -370:
         ball.reset_position()
         scoreboard.r_point()
 
